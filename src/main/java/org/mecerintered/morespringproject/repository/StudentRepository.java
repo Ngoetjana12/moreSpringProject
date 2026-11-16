@@ -1,6 +1,5 @@
 package org.mecerintered.morespringproject.repository;
 
-import
 import org.mecerintered.morespringproject.Entity.Students;
 import org.springframework.data.jpa.repository.JpaRepository;
 

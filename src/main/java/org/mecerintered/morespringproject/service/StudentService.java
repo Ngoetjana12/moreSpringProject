@@ -1,13 +1,13 @@
 package org.mecerintered.morespringproject.service;
 
 
-import jakarta.transaction.Transactional;
 import org.mecerintered.morespringproject.DTO.StudentRequest;
 import org.mecerintered.morespringproject.DTO.StudentResponse;
 import org.mecerintered.morespringproject.Entity.Students;
 import org.mecerintered.morespringproject.exceptions.DuplicateResourceException;
 import org.mecerintered.morespringproject.exceptions.ResourceNotFoundException;
 import org.mecerintered.morespringproject.repository.StudentRepository;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -103,6 +103,4 @@ public class StudentService {
                 student.getEmail()
         );
     }
-}
-
 }

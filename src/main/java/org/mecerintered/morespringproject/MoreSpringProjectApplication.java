@@ -11,7 +11,6 @@ public class MoreSpringProjectApplication {
         SpringApplication.run(MoreSpringProjectApplication.class, args);
     }
 
-    @GetMapping
     public String welcome(){
         return "App running on Port:8080";
     }
