@@ -65,5 +65,11 @@ public class StudentController {
 
         return ResponseEntity.ok(studentService.getStudentByEmail(email));
     }
+
+    @GetMapping("/lastname/{lastname}")
+    public ResponseEntity<StudentResponse> getByLastName(@PathVariable String lastname){
+
+        return ResponseEntity.ok(studentService.getByLastName(lastname));
+    }
 }
 

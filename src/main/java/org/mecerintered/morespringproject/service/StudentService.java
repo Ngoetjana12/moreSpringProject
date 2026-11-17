@@ -61,10 +61,12 @@ public class StudentService {
         return mapToResponse(student);
     }
 
-    @Transactional
-    public StudentResponse getByLname(){
+    @Transactional(readOnly = true)
+    public StudentResponse getByLastName(String lastName){
 
-        Students student = studentRepository.
+        Students student = studentRepository.findByLastName(lastName);
+
+        return mapToResponse(student);
     }
 
     @Transactional
