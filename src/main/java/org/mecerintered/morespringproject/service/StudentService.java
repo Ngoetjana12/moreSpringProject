@@ -54,6 +54,20 @@ public class StudentService {
     }
 
     @Transactional
+    public StudentResponse getStudentByEmail(String email){
+
+        Students student = studentRepository.findByEmail(email).orElseThrow(() -> new ResourceNotFoundException("Student not found"));
+
+        return mapToResponse(student);
+    }
+
+    @Transactional
+    public StudentResponse getByLname(){
+
+        Students student = studentRepository.
+    }
+
+    @Transactional
     public StudentResponse updateStudent(Long id, StudentRequest request) {
 
         Students student = findStudentOrThrow(id);

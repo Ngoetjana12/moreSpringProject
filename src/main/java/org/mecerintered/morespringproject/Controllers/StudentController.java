@@ -59,5 +59,11 @@ public class StudentController {
 
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/search/{email}")
+    public ResponseEntity<StudentResponse> getByEmail(@PathVariable String email){
+
+        return ResponseEntity.ok(studentService.getStudentByEmail(email));
+    }
 }
 
